@@ -40,14 +40,16 @@ const Navbar = ({ onToggleTheme, dark }) => {
               </button>
             ))}
 
-            <button
-              onClick={onToggleTheme}
-              aria-label="Toggle theme"
-              className="inline-flex items-center gap-2 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 px-3 py-1.5"
-            >
-              {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-              <span className="hidden lg:inline">Theme</span>
-            </button>
+      <button
+  aria-label="Current theme" onClick={onToggleTheme}
+  className="inline-flex items-center gap-2 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 px-3 py-1.5 cursor-default"
+>
+  {!dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+  <span className="hidden lg:inline">
+    {dark ? "In Dark Mode" : "In Light Mode"}
+  </span>
+</button>
+
 
             <a
               href="https://drive.google.com/file/d/1QVmGmgItV0ox2uPMRffHusyQmtzEi3py/view?usp=drivesdk"

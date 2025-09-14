@@ -82,16 +82,20 @@ const Hero = () => {
             </div>
           </div>
           <div className="relative">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="rounded-[2rem] aspect-square md:aspect-[4/5] bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200/60 dark:border-zinc-800/60 shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden"
-            >
+<motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="relative rounded-[2rem] aspect-square md:aspect-[4/5] bg-white bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden"
+>
+  <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(1000px_500px_at_120%_-10%,rgba(99,102,241,0.08),transparent),radial-gradient(800px_400px_at_-20%_110%,rgba(16,185,129,0.08),transparent)]" />
+  {/* Content */}
+
+
               <div className="absolute inset-0 bg-[radial-gradient(1000px_500px_at_120%_-10%,rgba(99,102,241,0.15),transparent),radial-gradient(800px_400px_at_-20%_110%,rgba(16,185,129,0.15),transparent)]" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center px-6">
-                  <div className="mx-auto mb-4 h-16 w-16 rounded-2xl bg-zinc-900/60 dark:bg-zinc-900/60 border border-zinc-800/60 dark:border-zinc-800/60 flex items-center justify-center backdrop-blur-xl">
+                  <div className="mx-auto mb-4 h-16 w-16 rounded-2xl bg-zinc-100/60 dark:bg-zinc-900/60 border border-zinc-800/60 dark:border-zinc-800/60 flex items-center justify-center backdrop-blur-xl">
                     <Sparkles className="h-7 w-7  text-zinc-600 dark:text-zinc-100" />
                   </div>
                     <h3 className="font-semibold text-xl text-zinc-600 dark:text-zinc-100">Backend brilliance</h3>
